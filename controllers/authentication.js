@@ -40,7 +40,7 @@ var authenticationController = {
     // after use. Useful for quick messages like "failed to login."
     // In this case, we pull any existing flash message id'd as "error"
     // and pass it to the view.
-    res.render('login', {
+    res.render('', {
       error: req.flash('error')
     });
   },
@@ -89,6 +89,8 @@ var authenticationController = {
     // It is safer to send as post, however, because the actual data won't
     // show up in browser history.
     var user = new User({
+      firstName: req.body.firstName,
+      lastName: req.body.firstName,
       username: req.body.username,
       password: req.body.password,
       email: req.body.email

@@ -3,6 +3,7 @@ var User = require('../models/user.js');
 var memberController = {
 
 	recipeBox: function(req, res){
+		console.log(req.user);
 		res.render('recipe-box');
 	},
 
