@@ -1,4 +1,4 @@
-var User = require('../models/users.js');
+var User = require('../models/user.js');
 
 var memberController = {
 
