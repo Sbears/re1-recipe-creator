@@ -90,7 +90,7 @@ var authenticationController = {
     // show up in browser history.
     var user = new User({
       firstName: req.body.firstName,
-      lastName: req.body.firstName,
+      lastName: req.body.lastName,
       username: req.body.username,
       password: req.body.password,
       email: req.body.email
@@ -139,3 +139,5 @@ var authenticationController = {
 
 // Export our controller methods
 module.exports = authenticationController;
+
+
