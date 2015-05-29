@@ -22,7 +22,7 @@ var performLogin = function(req, res, next, user){
     if(err) return next(err);
 
     // Otherwise, send the user to the homepage.
-    res.send(user.id);
+    return res.redirect('/');
   });
 };
 
@@ -106,19 +106,19 @@ var authenticationController = {
       if(err) {
 
         // By default, we'll show a generic message...
-        res.send('An error occured, please try again');
+        var errorMessage = 'An error occured, please try again';
 
         // If we encounter this error, the duplicate key error,
         // this means that one of our fields marked as "unique"
         // failed to validate on this object.
         if(err.code === 11000){
-          res.send('This user already exists.');
+          errorMessage = 'This user already exists.';
         }
 
         // Flash the message and redirect to the login view to
         // show it.
-        //req.flash('error', errorMessage);
-         res.send('success');
+        req.flash('error', errorMessage);
+        return res.redirect('/auth/login');
       }
 
       // If we make it this far, we are ready to log the user in.

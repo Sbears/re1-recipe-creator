@@ -20,7 +20,7 @@ var app = express();
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(flash());
@@ -34,12 +34,16 @@ app.use(passport.session());
 
 app.get('/', indexController.index);
 
-//app.post('/user', memberController.memberAdd);
+app.post('/user', memberController.memberAdd);
+app.post('/recipe', recipeController.recipeAdd);
 
 app.get('/auth/login', authenticationController.login);
 app.post('/auth/login', authenticationController.processLogin);
 app.post('/auth/signup', authenticationController.processSignup);
 app.get('/auth/logout', authenticationController.logout);
+
+
+
 
 
 // ******** PRVENT UNAUTHORIZED ACCES BELOW ******//
@@ -48,7 +52,6 @@ app.get('/recipe-box', memberController.recipeBox);
 app.get('/recipe-form-page', recipeController.recipeForm);
 app.post('/recipe', recipeController.recipeAdd);
 app.get('/pairing-playground', pairingController.pair);
-
 var server = app.listen(6673, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
