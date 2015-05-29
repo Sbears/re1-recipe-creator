@@ -1,22 +1,22 @@
 #sign-up-modal.modal.fade
 	if error
 		h3 = error
-	.modal-dialog
-		form.modal-content(action="/auth/signup" method="post")
+	.modal-dialog(ng-controller="UserController")
+		form.modal-content(ng-submit="submitForm()")
 			.modal-header
 				button.close(data-dismiss="modal") &times;
 				h4.modal-title Register
 			.modal-body
 				.form-group
-					input#user-first-name.form-control(type="text" name="firstName" placeholder="First Name")
+					input#user-first-name.form-control(ng-model="formData.firstName" type="text" name="firstName" placeholder="First Name")
 				.form-group
-					input#user-last-name.form-control(type="text" name="lastName" placeholder="Last Name")
+					input#user-last-name.form-control(ng-model="formData.lastName" type="text" name="lastName" placeholder="Last Name")
 				.form-group
-					input#user-user-name.form-control(type="text" name="username" placeholder="User Name")
+					input#user-user-name.form-control(ng-model="formData.username" type="text" name="username" placeholder="User Name")
 				.form-group
-					input#user-email.form-control(type="email" name="email" placeholder="Email")
+					input#user-email.form-control(ng-model="formData.email" type="email" name="email" placeholder="Email")
 				.form-group
-					input#user-password.form-control(type="password" name="password" placeholder="Password")
+					input#user-password.form-control(ng-model="formData.password" type="password" name="password" placeholder="Password")
 				.form-group
 					input#password-check.form-control(name="passwordCheck" placeholder="Password")
 			.modal-footer

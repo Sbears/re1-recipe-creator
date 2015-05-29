@@ -34,6 +34,7 @@ var ingredientsArray = [];
 		  	$http.post('/recipe', payload)
 		 		.success(function(data){
 		 			console.log('post data', data);
+		 			$scope.formData = {};
 		 	})
 		 	 	.error(function(data){
 		 	 		console.log(data);
@@ -47,17 +48,19 @@ var ingredientsArray = [];
 		$scope.formData = {};
 		$scope.submitForm = function(){
 			var payload = {
-				firstName: formData.firstName,
-				lastName: formData.lastName,
-				email: formData.email,
-				password: formData.password
+				firstName: $scope.formData.firstName,
+				lastName: $scope.formData.lastName,
+				username: $scope.formData.username,
+				email: $scope.formData.email,
+				password: $scope.formData.password
 			};
 
 			console.log('user: ', payload);
 
-			$http.post('/user', payload)
-				.succes(function(data){
+			$http.post('/auth/signup', payload)
+				.success(function(data){
 					console.log('post data ', data);
+					$scope.formData={};
 				})
 				.error(function(){
 					console.log(data);

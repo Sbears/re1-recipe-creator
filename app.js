@@ -34,12 +34,13 @@ app.use(passport.session());
 
 app.get('/', indexController.index);
 
-app.post('/user', memberController.memberAdd);
+//app.post('/user', memberController.memberAdd);
 
 app.get('/auth/login', authenticationController.login);
 app.post('/auth/login', authenticationController.processLogin);
 app.post('/auth/signup', authenticationController.processSignup);
 app.get('/auth/logout', authenticationController.logout);
+
 
 // ******** PRVENT UNAUTHORIZED ACCES BELOW ******//
 app.use(passportConfig.ensureAuthenticated);

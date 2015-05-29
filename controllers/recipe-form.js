@@ -1,5 +1,5 @@
 var Recipe = require('../models/recipes.js');
-
+var User = require('./authentication.js');
 
 
 var recipeController = {
@@ -9,8 +9,9 @@ var recipeController = {
 
 	recipeAdd: function(req, res){
 		var recipeData = req.body;
-		console.log('recipeData: ', recipeData);
+		console.log('User: ', req.user);
 		var recipe = new Recipe({
+			_creator: req.user.id,
 			title: recipeData.title,
 			description: recipeData.description,
 			category: recipeData.category,
@@ -25,7 +26,13 @@ var recipeController = {
 		});
 
 		recipe.save(function(err, results){
-			res.send(recipe);
+			console.log(err)
+			req.user.recipes.push(recipe);
+
+			req.user.save(function(err, user){
+				res.send(recipe);
+			
+			})
 		});
 			
 
