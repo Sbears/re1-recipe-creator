@@ -1,3 +1,12 @@
 #ingredient-list-tpl {
 	display: none;
 }
+
+.ing-box {
+	border: 3px solid black;
+	min-height: 100px;
+}
+
+.all-boxes-heading {
+	text-align: center;
+}

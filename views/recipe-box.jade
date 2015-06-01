@@ -2,9 +2,9 @@ extends layout
 
 block content
 	body(ng-controller="boxController")
-
+		h1 My Recipe Box
 			#recipe-tpl.col-md-12
-				h2.recipe-name Recipe Name
+				h2.recipe-name #{recipe.title}
 					|                         
 					.time-container
 					span.time-span

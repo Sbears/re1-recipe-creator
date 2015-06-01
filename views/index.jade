@@ -3,7 +3,28 @@ extends layout
 block content
 	body
 		.container
-			h3 Home Page
+			h3.all-boxes-heading Pairing Playground
+			.container
+				form(action="/addIngredient", method="post")
+					input(type="text", placeholder="Ingredient", name="ingredient")
+					input(type="submit")
+			.container.wrapper 
+				.container.col-xs-4
+					h4 Out Box
+					.container.col-xs-12.ing-box#out
+				.container.col-xs-4
+					.container.col-xs-12
+						h4.col-xs-6 In Box
+						a.col-xs-6(href='/clear-ing') clear box
+					.container.col-xs-12.ing-box#ingredient
+						for ingredient in ingredients
+							div -#{ingredient}
+				.container.col-xs-4
+					h4 Match Box
+					.container.col-xs-12.ing-box#match
+
+
+
 
 
 			

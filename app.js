@@ -36,6 +36,8 @@ app.get('/', indexController.index);
 
 app.post('/user', memberController.memberAdd);
 app.post('/recipe', recipeController.recipeAdd);
+app.post('/clear-ing', pairingController.clearIng);
+app.post('/addIngredient', pairingController.addIngredient);
 
 app.get('/auth/login', authenticationController.login);
 app.post('/auth/login', authenticationController.processLogin);
@@ -43,15 +45,18 @@ app.post('/auth/signup', authenticationController.processSignup);
 app.get('/auth/logout', authenticationController.logout);
 
 
-
+app.get('/recipe-box', memberController.recipeBox);
 
 
 // ******** PRVENT UNAUTHORIZED ACCES BELOW ******//
 app.use(passportConfig.ensureAuthenticated);
-app.get('/recipe-box', memberController.recipeBox);
+
+
 app.get('/recipe-form-page', recipeController.recipeForm);
 app.post('/recipe', recipeController.recipeAdd);
-app.get('/pairing-playground', pairingController.pair);
+//app.get('/pairing-playground', pairingController.pair);
+
 var server = app.listen(6673, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
+

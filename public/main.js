@@ -134,8 +134,7 @@ $(document).on('ready', function(){
 		 // 	console.log(oneRecipe.cookTime);
 		 // 	$(".recipe-viewing").append(oneRecipe.render());
 			// $(".recipe-list-container").append(oneRecipe.renderList());
-			//document.getElementById("#create-recipe-form").reset();
-			//$(".enter-ingredient-container").empty();
+
 			
 			dataForServer = oneRecipe
 
@@ -144,6 +143,9 @@ $(document).on('ready', function(){
 			$.post('/recipe', dataForServer, function(dataFromServer){
 				console.log(dataFromServer);
 			});
+		 	$("#create-recipe-form")[0].reset();
+
+
 		 });
 
 			
