@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var flash = require('connect-flash');
 var passport = require('passport');
 var passportConfig = require('./config/passport');
+var matchData = require('./models/match-data.json');
 
 var indexController = require('./controllers/index.js');
 var recipeController = require('./controllers/recipe-form.js');
