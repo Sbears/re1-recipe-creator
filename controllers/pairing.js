@@ -1,5 +1,5 @@
 var pairing = require('../models/pairing-model.js');
-
+var _=require('underscore');
 
 var pairingController = {
 	// pair: function(res, send){
@@ -22,11 +22,12 @@ var pairingController = {
 
 			if(ingredient !== ""){
 		    req.session.ingredients.push(ingredient);
-		 //   res.redirect('/');
+
 				//console.log(req.session.ingredients);	
 
 					if (req.session.ingredients.length === 1) {
 						match = pairing.firstMatch(req.session.ingredients);
+						//console.log(match);
 					}	else {
 						match = pairing.createMatchArray(pairing.firstMatch(req.session.ingredients));
 					}
@@ -34,19 +35,22 @@ var pairingController = {
 			}
 		} else if(req.body.newList){
 			req.session.ingredients = req.body.newList;
-			//console.log(req.session.ingredients);
+			 //console.log(req.session.ingredients);
+			// console.log(req.body.newList);
 					if (req.session.ingredients.length === 1) {
 						match = pairing.firstMatch(req.session.ingredients);
+						console.log(match);
 					}	else {
 						match = pairing.createMatchArray(pairing.firstMatch(req.session.ingredients));
 					}
 		}
-		// if(match.length > 1){
-		// 	for (var i = 0; i < match.length-1; i++) {
-		// 		match = match[i].concat(match[i+1]);
-		// 	}
-		// }
-		req.session.match = match;
+		//console.log('match outside if: ', match);
+		// create a single array out of the match array of arrays
+		match2 = match.join().split(',');
+		match3 = _.uniq(match2);
+		//console.log('match3: ', match3);
+
+		req.session.match = match3;
 		//console.log(req.session.match);
 		res.redirect('/');
 	},

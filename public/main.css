@@ -2,11 +2,28 @@
 	display: none;
 }
 
+.center {
+	text-align: center;
+}
+
 .ing-box {
 	border: 3px solid black;
 	min-height: 100px;
 }
 
-.all-boxes-heading {
+/*#all-boxes-heading {
 	text-align: center;
+}*/
+
+/*#recipe-box-form {
+	width: 75%;
+}*/
+#recipe-box-input {
+	width: 400px;
 }
+
+.wrapper,
+.form-wrapper
+	{
+		margin-top: 40px;
+	}

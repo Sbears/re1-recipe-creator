@@ -5,8 +5,10 @@ var session =require('express-session');
 var cookieParser = require('cookie-parser');
 var flash = require('connect-flash');
 var passport = require('passport');
+var _ = require('underscore');
 var passportConfig = require('./config/passport');
 var matchData = require('./models/match-data.json');
+
 
 var indexController = require('./controllers/index.js');
 var recipeController = require('./controllers/recipe-form.js');
