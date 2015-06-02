@@ -16,7 +16,7 @@ var pairingController = {
 			req.session.ingredients =[];
 		}
 
-		console.log(req.body.ingredient);
+		//console.log(req.body.ingredient);
 		if(req.body.ingredient){
 			var ingredient = req.body.ingredient;
 
@@ -41,12 +41,13 @@ var pairingController = {
 						match = pairing.createMatchArray(pairing.firstMatch(req.session.ingredients));
 					}
 		}
-		// if(match.length > 1)
+		// if(match.length > 1){
 		// 	for (var i = 0; i < match.length-1; i++) {
 		// 		match = match[i].concat(match[i+1]);
 		// 	}
+		// }
 		req.session.match = match;
-		console.log(match);
+		//console.log(req.session.match);
 		res.redirect('/');
 	},
 };
