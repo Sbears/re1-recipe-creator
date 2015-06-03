@@ -1,0 +1,18 @@
+#sign-in-modal.modal.fade
+	if error
+		h3 = error
+	.modal-dialog
+		form.modal-content(action="/auth/login" method="post")
+			.modal-header
+				button.close(data-dismiss="modal") &times;
+				h4.modal-title Sign In
+			.modal-body
+				.form-group
+					input#user-user-name.form-control(type="text" name="username" placeholder="User Name")
+				.form-group
+					input#user-email.form-control(type="email" name="email" placeholder="Email")
+				.form-group
+					input#user-password.form-control(type="password" name="password" placeholder="Password")
+			.modal-footer
+				button.btn.btn-default(data-dismiss="modal") Close
+				button.btn.btn-default(type="submit" data-loading-text="Saving...") Sign In

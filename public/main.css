@@ -1,3 +1,81 @@
+body {
+	background-image: url("/img/strawberry.jpg");
+}
+
+.outer-container {
+	margin: 0 50px 0 50px;
+}
+
+.ingredients {
+	list-style: none;
+	text-align: left;
+}
+
+.recipe-directions {
+	text-align: left;
+}
+
 #ingredient-list-tpl {
-/*	display: none;*/
+	display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.ing-box {
+	/*border: 3px solid black;*/
+	min-height: 100px;
+	background-color: #E0F2F1;
+	background-color: ;
+	border-radius: 5px;
+}
+
+/*#all-boxes-heading {
+	text-align: center;
+}*/
+
+/*#recipe-box-form {
+	width: 75%;
+}*/
+#recipe-box-input {
+	width: 400px;
+	height: 30px;
+	border-radius: 5px, 0, 0, 5px;
+	border: none;
+	color: black;
+}
+
+#submit {
+	height: 30px;
+	border: none;
+	border-radius: 0, 5px, 5px, 0;
+	color: black;
+}
+
+.wrapper,
+.form-wrapper
+	{
+		margin-top: 40px;
+	}
+
+.ing-box div,
+.gu-mirror {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+ 	border-radius: 5px;
+}
+
+.drag-section {
+/*	background-color: #FFC080;*/
+	background-color: #B2DFDB;
+	color: white;
+	padding-bottom: 20px;
+
 }

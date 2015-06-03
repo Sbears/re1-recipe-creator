@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var recipeSchema = Schema({
-	_creator: {type: Number, ref: 'user'},
+	_creator: {type: String, ref: 'user'},
 	title: String,
 	description: String,
 	category: String,
@@ -10,8 +10,8 @@ var recipeSchema = Schema({
 	cookTime: Number,
 	totalTime: Number,
 	serves: Number,
-	yield: Number,
-	ingredients: [],
+	yield: String,
+	ingredients: [String],
 	directions: String
 
 });

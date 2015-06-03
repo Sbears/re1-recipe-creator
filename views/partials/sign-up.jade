@@ -1,18 +1,22 @@
 #sign-up-modal.modal.fade
+	if error
+		h3 = error
 	.modal-dialog
-		form.modal-content(action="user" method="post")
+		form.modal-content(action="/auth/signup" method="post")
 			.modal-header
 				button.close(data-dismiss="modal") &times;
-				h4.modal-title Sign Up Here
+				h4.modal-title Register
 			.modal-body
 				.form-group
-					input#user-first-name.form-control(name="firstName" placeholder="First Name")
+					input#user-first-name.form-control(type="text" name="firstName" placeholder="First Name")
 				.form-group
-					input#user-last-name.form-control(name="lastName" placeholder="Last Name")
+					input#user-last-name.form-control(type="text" name="lastName" placeholder="Last Name")
 				.form-group
-					input#user-email.form-control(name="email" placeholder="Email")
+					input#user-user-name.form-control(type="text" name="username" placeholder="User Name")
 				.form-group
-					input#user-password.form-control(name="password" placeholder="Password")
+					input#user-email.form-control(type="email" name="email" placeholder="Email")
+				.form-group
+					input#user-password.form-control(type="password" name="password" placeholder="Password")
 				.form-group
 					input#password-check.form-control(name="passwordCheck" placeholder="Password")
 			.modal-footer

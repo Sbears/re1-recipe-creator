@@ -6,16 +6,17 @@ block content
 			div(class="row")
 				div(class="col-md-12")
 					h1(class="recipe-form-heading") Create a New Recipe
-					form(id="create-recipe-form" ng-submit="submitForm()")
+					p#message
+					form(id="create-recipe-form" )
 						div(class="form-group")
-							input(ng-model="formData.title" type="text" name="name" class="form-control input-name" placeholder="Recipe Title")
+							input(type="text" name="title" class="form-control input-name" placeholder="Recipe Name")
 
 						div(class="form-group")
-							textarea(ng-model="formData.description" name="description" class="form-control input-description" rows="3" placeholder="Recipe Description")
+							textarea(name="description" class="form-control input-description" rows="3" placeholder="Recipe Description")
 
 						div(class="categories-section form-group col-md-6")
 							p(class="") Category
-							select(ng-model="formData.category" name="category" class="form-control input-category")
+							select(name="category" class="form-control input-category")
 								option
 								option Main Course
 								option Side Dish
@@ -29,7 +30,7 @@ block content
 								option Bread
 						div(class="meal-section form-group col-md-6")
 								p Meal
-								select(ng-model="formData.meal" name="meal" class="form-control input-meal")
+								select(name="meal" class="form-control input-meal")
 									option
 									option Breakfast
 									option Lunch
@@ -39,13 +40,13 @@ block content
 
 						div(class="col-md-6 form-group")
 							div(class="col-md-12 form-group")
-								input(ng-model="formData.prepTime" name="prepTime" class="input-prep-time" placeholder="Prep Time")
+								input(name="prepTime" class="input-prep-time" placeholder="Prep Time")
 								select(class="prep-time-units")
 									option Minutes
 									option Hours
 									option Days
 							div(class="col-md-12 form-group")
-								input(ng-model="formData.cookTime" name="cookTime" class="input-cook-time" placeholder="Cook Time")
+								input(name="cookTime" class="input-cook-time" placeholder="Cook Time")
 								select(class="cook-time-units")
 									option Minutes
 									option Hours
@@ -55,29 +56,29 @@ block content
 
 						div(class="col-md-6 form-group")
 							div(class="col-md-12 form-group")
-								input(ng-model="formData.serves" name="serves" class"input-serves" placeholder="Serves")
+								input(name="serves" class"input-serves" placeholder="Serves")
 
 							div(class="col-md-12 form-group")
-								input(ng-model="formData.yield" name="yield" class="input-yield" placeholder="Yield")
+								input(name="yield" class="input-yield" placeholder="Yield")
 
 						//////// Ingredients Section
 
 						div(class="col-md-12 form-group" )
 							p Enter Your Ingredients One at a Time in this form - 5 lbs chicken
-							ul(ng-repeat="n in ingredientsArray track by $index" class="enter-ingredient-container" )
+							ul(class="enter-ingredient-container" )
 					
-								li(id="ingredient-list-tpl" class="list") {{n}}
+								li(id="ingredient-list-tpl" class="list")
 
 							div(class="ingredients-input-section form-group")
-								input(name="ingredient" class="input-ingredient" placeholder="Ingredient" ng-model="ingredient")
+								input(name="ingredient" class="input-ingredient" placeholder="Ingredient")
 
 
-								button(id="enter-ingredient-button" ng-click="enterIngredient($event)") Enter Ingredient
+								button(id="enter-ingredient-button") Enter Ingredient
 
 						/////   Directions Section
 
 						div(class="directions-input-section form-group")
-							textarea(ng-model="formData.directions" name="directions" class="form-control input-directions" rows="3" placeholder="Directions")
+							textarea(name="directions" class="form-control input-directions" rows="3" placeholder="Directions")
 
 
 					

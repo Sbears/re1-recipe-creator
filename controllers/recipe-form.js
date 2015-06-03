@@ -1,16 +1,18 @@
 var Recipe = require('../models/recipes.js');
-
-
+var User = require('./authentication.js');
 
 var recipeController = {
 	recipeForm: function(req, res){
 		res.render('recipe-form-page');
 	},
 
+
+
 	recipeAdd: function(req, res){
 		var recipeData = req.body;
 		console.log('recipeData: ', recipeData);
 		var recipe = new Recipe({
+			_creator: (req.user && req.user.id)||'testId',
 			title: recipeData.title,
 			description: recipeData.description,
 			category: recipeData.category,
@@ -24,8 +26,24 @@ var recipeController = {
 
 		});
 
+
+		// recipe.save(function(err, results){
+		// 	console.log(err)
+		// 	console.log(results)
+		// 	res.send(recipe);
+		// })
+
 		recipe.save(function(err, results){
-			res.send(recipe);
+			console.log(err);
+
+			req.user.recipes.push(recipe);
+			req.user.save(function(err, user){
+				if(err){
+					res.send('Form did not submit');
+				}
+				res.send('Form submitted successfully');
+			});
+
 		});
 			
 

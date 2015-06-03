@@ -1,0 +1,327 @@
+[  
+   {  
+      "ingredient":"bok choy",
+      "category":"vegetable",
+      "cuisine":[  
+         "asian",
+         "chinese",
+         "japanese"
+      ],
+      "flavorAffinities":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+         "ginger",
+         "rice",
+         "sesame oil",
+         "sesame seeds",
+         "soy sauce"
+      ],
+      "lowP":[  
+         "curry"
+      ],
+      "allP":[  
+         "ginger",
+         "rice",
+         "sesame oil",
+         "sesame seeds",
+         "soy sauce",
+         "curry"
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"ginger",
+      "category":"spice",
+      "cuisine":[  
+         "asian",
+         "chinese",
+         "japanese"
+      ],
+      "flavorAffinities":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+         "cream",
+         "ice cream",
+         "curry",
+         "fish",
+         "honey",
+         "lime",
+         "scallions",
+         "soy sauce",
+         "sugar",
+         "white sugar",
+         "brown sugar",
+         "vinegar",
+         "champagne vinegar",
+         "cider vinegar",
+         "rice wine vinegar"
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "allP":[  
+         "cream",
+         "ice cream",
+         "curry",
+         "fish",
+         "honey",
+         "lime",
+         "scallions",
+         "soy sauce",
+         "sugar",
+         "white sugar",
+         "brown sugar",
+         "vinegar",
+         "champagne vinegar",
+         "cider vinegar",
+         "rice wine vinegar"
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"rice",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "flavorAffinities":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+         "saffron"
+      ],
+      "medP":[  
+         "butter",
+         "coconut",
+         "coconut milk"
+      ],
+      "low":[  
+         "anise",
+         "bacon",
+         "beans",
+         "chicken",
+         "cinnamon",
+         "cream",
+         "milk",
+         "curry powder",
+         "curry",
+         "fish",
+         "fish sauce",
+         "garlic",
+         "ginger",
+         "lemon",
+         "lemon zest",
+         "meat",
+         "nuts",
+         "onions",
+         "peas",
+         "raisins",
+         "rhubarb",
+         "salt",
+         "shellfish",
+         "shrimp",
+         "stocks",
+         "chicken stock",
+         "vegetabe stock",
+         "sugar",
+         "tomato",
+         "tomatoes",
+         "vegetable",
+         "vegetables"
+      ],
+      "allP":[  
+         "saffron",
+         "butter",
+         "coconut",
+         "coconut milk",
+         "anise",
+         "bacon",
+         "beans",
+         "chicken",
+         "cinnamon",
+         "cream",
+         "milk",
+         "curry powder",
+         "curry",
+         "fish",
+         "fish sauce",
+         "garlic",
+         "ginger",
+         "lemon",
+         "lemon zest",
+         "meat",
+         "nuts",
+         "onions",
+         "peas",
+         "raisins",
+         "rhubarb",
+         "salt",
+         "shellfish",
+         "shrimp",
+         "stocks",
+         "chicken stock",
+         "vegetabe stock",
+         "sugar",
+         "tomato",
+         "tomatoes",
+         "vegetable",
+         "vegetables"
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "avoid":[  
+
+      ]
+   }
+]
