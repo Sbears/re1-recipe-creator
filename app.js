@@ -16,7 +16,7 @@ var memberController = require('./controllers/member-page.js');
 var pairingController = require('./controllers/pairing.js');
 var authenticationController = require('./controllers/authentication');
 
-mongoose.connect('mongodb://localhost/re1');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/re1');
 
 var app = express();
 
