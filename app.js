@@ -59,7 +59,8 @@ app.get('/recipe-box', memberController.recipeBox);
 
 //app.get('/pairing-playground', pairingController.pair);
 
-var server = app.listen(6673, function() {
+var port = procces.env.	port || 6673;
+var server = app.listen(port, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
 
