@@ -36,23 +36,25 @@ var pairingController = {
 		} else if(req.body.newList){
 			req.session.ingredients = req.body.newList;
 			 //console.log(req.session.ingredients);
-			// console.log(req.body.newList);
+			 console.log('inside if: ',req.body.newList);
 					if (req.session.ingredients.length === 1) {
 						match = pairing.firstMatch(req.session.ingredients);
 						console.log(match);
+
 					}	else {
 						match = pairing.createMatchArray(pairing.firstMatch(req.session.ingredients));
+
 					}
 		}
-		//console.log('match outside if: ', match);
+		console.log('match outside if!: ', match);
 		// create a single array out of the match array of arrays
 		match2 = match.join().split(',');
 		match3 = _.uniq(match2);
-		//console.log('match3: ', match3);
+		console.log('match3: ', match3);
 
 		req.session.match = match3;
-		//console.log(req.session.match);
-		res.redirect('/');
+		console.log("Got Here!");
+		res.send(match3);
 	},
 };
 

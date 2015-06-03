@@ -73,6 +73,8 @@ $('#create-recipe-form').on('submit', function(e){
 
 	$.post('/recipe', dataForServer, function(dataFromServer){
 		console.log(dataFromServer);
+		$('#message').html('<p class="alert alert-success">'+dataFromServer+'</p>');
+		location.href = '/recipe-box';
 	});
  	$("#create-recipe-form")[0].reset();
 

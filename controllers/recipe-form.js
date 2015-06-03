@@ -12,7 +12,7 @@ var recipeController = {
 		var recipeData = req.body;
 		console.log('recipeData: ', recipeData);
 		var recipe = new Recipe({
-			_creator: req.user.id,
+			_creator: (req.user && req.user.id)||'testId',
 			title: recipeData.title,
 			description: recipeData.description,
 			category: recipeData.category,
@@ -35,10 +35,14 @@ var recipeController = {
 
 		recipe.save(function(err, results){
 			console.log(err);
+
 			req.user.recipes.push(recipe);
 			req.user.save(function(err, user){
-				res.send(recipe);
-			})
+				if(err){
+					res.send('Form did not submit');
+				}
+				res.send('Form submitted successfully');
+			});
 
 		});
 			

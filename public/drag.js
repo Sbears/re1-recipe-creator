@@ -13,15 +13,39 @@
 //   removeOnSpill: false   // spilling will `.remove` the element, if this is true
 // });
 
-var drake = dragula([document.querySelector('#out'), document.querySelector('#ingredient'), document.querySelector('#match')]);
-
-drake.on('drop', function(el, container, source){
+var updateSuggestion = function(){
 	var contents = $( '#ingredient' ).find('div').text();
 	var ingredients = contents.trim().split('-');
 	ingredients.shift();
 	console.log(ingredients);
 	$.post('/addIngredient',{newList: ingredients}, function(dataFromServer){
+		console.log(dataFromServer);
+		if(dataFromServer === ['']){
+			$('#match').text('');
+		} else {
+			$('#match').text('');
+			for (var i = 0; i < dataFromServer.length; i++) {
+				$('#match').append('<div>-'+ dataFromServer[i] + '</div');
+			}
+		}
 	});
+};
+
+$('#recipe-box-form').on('submit', function(e){
+
+	e.preventDefault();
+	var ingredient = $('.ingredient').val();
+	$('#ingredient').append('<div>-'+ ingredient + '</div>');
+	updateSuggestion();
+	$('#recipe-box-input').val('');
+
+
+});
+
+var drake = dragula([document.querySelector('#out'), document.querySelector('#ingredient'), document.querySelector('#match')]);
+
+drake.on('drop', function(el, container, source){
+updateSuggestion();
 });
 
 

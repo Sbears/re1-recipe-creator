@@ -20,7 +20,7 @@ var performLogin = function(req, res, next, user){
   req.login(user, function(err){
     // If there was an error, allow execution to move to the next middleware
     if(err) return next(err);
-
+    //req.user = user;
     // Otherwise, send the user to the homepage.
     return res.redirect('/');
   });

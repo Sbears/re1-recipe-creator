@@ -4,29 +4,28 @@ block content
 	body
 		.container.center
 			h2 Welcome to Recipe Box!
-		.container
+			if user 
+				p Welcome #{user.firstName}
+		.container.drag-section
 			h3.center#all-boxes-heading Pairing Playground
 			.container.center.form-wrapper
-				form.center#recipe-box-form(action="/addIngredient", method="post")
+				form.center#recipe-box-form(action="destination.html")
 					.container.formgroup
-						input#recipe-box-input(type="text", placeholder="Ingredient", name="ingredient")
-						input(type="submit")
+						input#recipe-box-input.ingredient(type="text", placeholder="Ingredient", name="ingredient")
+						input#submit(type="submit")
 			.container.wrapper 
 				.container.col-xs-4
 					h4 Out Box
 					.container.col-xs-12.ing-box#out
 				.container.col-xs-4
-					.container.col-xs-12
+					.container#ingredients-container.col-xs-12
 						h4.col-xs-6 Ingredients
 						a.col-xs-6(href='/clear-ing') clear box
 					.container.col-xs-12.ing-box#ingredient
-						for ingredient in ingredients
-							div -#{ingredient}
 				.container.col-xs-4
 					h4 Suggestions
 					.container.col-xs-12.ing-box#match
-						for match in matches
-							div -#{match}
+
 
 
 

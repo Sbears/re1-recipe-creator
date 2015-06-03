@@ -48,15 +48,15 @@ app.post('/auth/signup', authenticationController.processSignup);
 app.get('/auth/logout', authenticationController.logout);
 
 
-app.get('/recipe-box', memberController.recipeBox);
+
 
 
 // ******** PRVENT UNAUTHORIZED ACCES BELOW ******//
 app.use(passportConfig.ensureAuthenticated);
-
-
 app.get('/recipe-form-page', recipeController.recipeForm);
 app.post('/recipe', recipeController.recipeAdd);
+app.get('/recipe-box', memberController.recipeBox);
+
 //app.get('/pairing-playground', pairingController.pair);
 
 var server = app.listen(6673, function() {
