@@ -2,33 +2,32 @@ extends layout
 
 block content
 	body
-		div.container
-			div.head.center
+		div.center.container
+			div.head
 				h1 Welcome to Recipe Box!
 				h4 A place to create and save your recipes
-			div
-				p.description Check out the pairing playground where you can experiment with different ingredient combinations an find matches. Enter ingredients into the form. Matches will show up in the Suggestion box. Drag an ingredient into reserve box to take out of the picture and drag back in as desired to experiment with different combinations. You may also drag from Suggestions. Register to save your recipes to the Recipe Box.
-			.container.drag-section
-				h3.center#all-boxes-heading Pairing Playground
-				div.center.form-wrapper
-					form.center#recipe-box-form(action="destination.html")
-						div.formgroup
-							input#recipe-box-input.ingredient(type="text", placeholder="Ingredient", name="ingredient")
-							input#submit(type="submit")
-				div.wrapper 
-					div.col-xs-4
-						h4.center On Reserve
-						div.col-xs-12.ing-box#out
-					div.col-xs-4
-						div#ingredients-container.col-xs-12
-							h4.center Ingredients
-							//- a.col-xs-6(href='/clear-ing') clear box
-						div.col-xs-12.ing-box#ingredient
-					div.col-xs-4
-						h4.center Suggestions
-						div.col-xs-12.ing-box#match
-
-
+			div.description-container
+				p.description
+					em Check out the pairing playground where you can experiment with different ingredient combinations an find matches. Enter ingredients into the form. Matches will show up in the Suggestion box. Drag an ingredient into reserve box to take out of the picture and drag back in as desired to experiment with different combinations. You may also drag from Suggestions. Register to save your recipes to the Recipe Box.
+		.container.drag-section
+			h3.center#all-boxes-heading Pairing Playground
+			div.center.form-wrapper
+				form.center#recipe-box-form(action="destination.html")
+					.container.formgroup
+						input#recipe-box-input.ingredient(type="text", placeholder="Ingredient", name="ingredient")
+						input#submit(type="submit")
+			div.wrapper 
+				div.col-xs-4
+					h4.center On Reserve
+					div.col-xs-12.ing-box#out
+				div.col-xs-4
+					div#ingredients-container.col-xs-12
+						h4.center Ingredients
+						//- a.col-xs-6(href='/clear-ing') clear box
+					div.col-xs-12.ing-box#ingredient
+				div.col-xs-4
+					h4.center Suggestions
+					div.col-xs-12.ing-box#match
 
 
 

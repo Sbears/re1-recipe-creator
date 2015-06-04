@@ -48,8 +48,12 @@ body {
  height: 80px;
 }
 
+.description-container {
+
+}
+
 .description {
-	padding: 0 76px;
+	padding: 80px 200px;
 	clear: left;
 	text-align: left;
 }
