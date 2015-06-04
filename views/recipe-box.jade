@@ -6,35 +6,37 @@ block content
 			div.outer-container
 				h1 My Recipe Box
 				for recipe in recipes
-					.row
-						div#recipe-tpl.col-sm-12
-							h2.recipe-name #{recipe.title}
-					.row.time-container
-						div.col-sm-4.time
-							span Preperation Time:
-							span.prep-time #{recipe.prepTime}
-						div.col-sm-4.time
-							span Cook Time:
-							span.cook-time #{recipe.cookTime}
-						div.col-sm-4.time
-							span Total Time: 
-							span.total-time #{recipe.totalTime}
-					div
-						p.recipe-description
-							em #{recipe.description}
-					div.ingredients-container.col-sm-6
-						h3.ingredients-heading Ingredients
-						div.col-sm-6.align-left
-							ul.ingredients
-								for ingredient in recipe.ingredients
-									li #{ingredient}
-							span.servings-yield.serves
-						div.ingredients-container.col-sm-6
-							span.servings-yield.yield
-							.container.ingredient-list
-					div.col-sm-6
-						h3 Directions
-						p.recipe-directions.align-left #{recipe.directions}
+					div.recipe-container
+						.row
+							div.recipe-title.col-sm-12
+								h2.recipe-name #{recipe.title}
+						.row.time-container
+							div.col-sm-4.time
+								span Preperation Time:
+								span.prep-time #{recipe.prepTime}
+							div.col-sm-4.time
+								span Cook Time:
+								span.cook-time #{recipe.cookTime}
+							div.col-sm-4.time
+								span Total Time: 
+								span.total-time #{recipe.totalTime}
+						.row
+							div.recipe-description
+									em #{recipe.description}
+						.row
+							div.ingredients-container.col-sm-6
+								h3.ingredients-heading Ingredients
+								div.col-sm-6.align-left
+									ul.ingredients
+										for ingredient in recipe.ingredients
+											li #{ingredient}
+								//- 	span.servings-yield.serves
+								//- div.ingredients-container.col-sm-6
+								//- 	span.servings-yield.yield
+								//- 	.container.ingredient-list
+							div.col-sm-6
+								h3 Directions
+								p.recipe-directions.align-left #{recipe.directions}
 
 
 
