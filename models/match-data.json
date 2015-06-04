@@ -193,7 +193,7 @@
       ]
    },
    {  
-      "ingredient":"",
+      "ingredient":"whiskey",
       "category":"",
       "cuisine":[  
 
@@ -208,6 +208,110 @@
 
       ],
       "lowP":[  
+
+      ],
+      "allP":[       
+         "allspice",
+         "chocolate",
+         "cinnamon",
+         "cream",
+         "ice cream",
+         "dried fruits",
+         "figs",
+         "ginger",
+         "ginger ale",
+         "honey",
+         "lemon",
+         "orange",
+         "pears",
+         "cinnamon",
+         "star anise",
+         "brown sugar",
+         "white sugar",
+         "sweet potatoes",
+         "vanilla", 
+         "peaches"
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"peaches",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "allP":[
+      "almonds",
+      "anise",
+      "arugula",
+      "whiskey",
+      "basil",
+      "blackberries",
+      "blueberries",
+      "butter",
+      "jalepeno",
+      "chocolate",
+      "cinnamon",
+      "cloves",
+      "cream",
+      "ice cream",
+      "figs",
+      "ginger",
+      "honey",
+      "lemon",
+      "vanilla",
+      "nutmeg",
+      "orange",
+      "star anise",
+      "thyme",
+      "walnuts",
+      "olive oil"
+
+      ],
+      "avoid":[  
+
+      ]
+   },
+   {  
+      "ingredient":"arugula",
+      "category":"",
+      "cuisine":[  
+
+      ],
+      "classicP":[  
+
+      ],
+      "highP":[  
+
+      ],
+      "medP":[  
+
+      ],
+      "lowP":[  
+
+      ],
+      "allP":[
+      "almonds",
+      "basil",
+      "pears",
+      "lemon",
+      "walnuts",
+      "pears",
+      "olive oil"
 
       ],
       "avoid":[  
@@ -232,26 +336,7 @@
       "lowP":[  
 
       ],
-      "avoid":[  
-
-      ]
-   },
-   {  
-      "ingredient":"",
-      "category":"",
-      "cuisine":[  
-
-      ],
-      "classicP":[  
-
-      ],
-      "highP":[  
-
-      ],
-      "medP":[  
-
-      ],
-      "lowP":[  
+      "allP":[
 
       ],
       "avoid":[  
@@ -276,26 +361,7 @@
       "lowP":[  
 
       ],
-      "avoid":[  
-
-      ]
-   },
-   {  
-      "ingredient":"",
-      "category":"",
-      "cuisine":[  
-
-      ],
-      "classicP":[  
-
-      ],
-      "highP":[  
-
-      ],
-      "medP":[  
-
-      ],
-      "lowP":[  
+      "allP":[
 
       ],
       "avoid":[  
@@ -318,6 +384,9 @@
 
       ],
       "lowP":[  
+
+      ],
+      "allP":[
 
       ],
       "avoid":[  
